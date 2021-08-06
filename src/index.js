@@ -1,73 +1,38 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import NewTaskForm from "../src/comoinents/NewTaskForm";
+import TaskList from "../src/comoinents/TaskList";
+import Footer from "../src/comoinents/Footer";
 
 
 
-const header = (
-  <div>
-      <header className={'header'}>
-          <h1>todos</h1>
-          <input className={"new-todo"} placeholder={"What needs to be done?"} autoFocus={true}/>
-      </header>
-      <section className={'main'}>
-          <ul className={"todo-list"}>
-              <li className={"completed"}>
-                  <div className={"view"}>
-                      <input className={"toggle"} type={"checkbox"}/>
-                          <label>
-                              <span className={"description"}>Completed task</span>
-                              <span className={"created"}>created 17 seconds ago</span>
-                          </label>
-                          <button className={"icon icon-edit"}></button>
-                          <button className={"icon icon-destroy"}></button>
-                  </div>
-              </li>
-              <li className={"editing"}>
-                  <div className={"view"}>
-                      <input className={"toggle"} type={"checkbox"}/>
-                          <label>
-                              <span className={"description"}>Editing task</span>
-                              <span className={"created"}>created 5 minutes ago</span>
-                          </label>
-                          <button className={"icon icon-edit"}></button>
-                          <button className={"icon icon-destroy"}></button>
-                  </div>
-                  <input type={"text"} className={"edit"} defaultValue={"Editing task"}/>
-              </li>
-              <li>
-                  <div className={"view"}>
-                      <input className={"toggle"} type={"checkbox"}/>
-                          <label>
-                              <span className={"description"}>Active task</span>
-                              <span className={"created"}>created 5 minutes ago</span>
-                          </label>
-                          <button className={"icon icon-edit"}></button>
-                          <button className={"icon icon-destroy"}></button>
-                  </div>
-              </li>
-          </ul>
-          <footer className={"footer"}>
-              <span className={"todo-count"}>1 items left</span>
-              <ul className={"filters"}>
-                  <li>
-                      <button className={"selected"}>All</button>
-                  </li>
-                  <li>
-                      <button>Active</button>
-                  </li>
-                  <li>
-                      <button>Completed</button>
-                  </li>
-              </ul>
-              <button className={"clear-completed"}>Clear completed</button>
-          </footer>
-      </section>
-  </div>
+const Form = () => {
+    return (
+        <span>
+        <NewTaskForm/>
+        <section className='main'>
+            <TaskList/>
+            <Footer/>
+        </section>
+        </span>
+    )
+}
+
+ReactDOM.render(<Form/>, document.getElementById('todoapp'));
 
 
-)
 
 
- ReactDOM.render(header, document.getElementById('todoapp'));
-// ReactDOM.render(main, document.getElementById('todoapp'));
+
+
+
+
+
+
+
+
+
+
+
+
