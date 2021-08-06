@@ -1,21 +1,20 @@
 import React from 'react';
+
 function showInput(event) {
-
-    console.log(event.target.value)
+  return (event.target.value).toString()
 }
-
 
 const NewTaskForm = () => {
     return (
         <header className='header'>
             <h1>todos</h1>
-            <input className="new-todo" placeholder="What needs to be done?" autoFocus={true} onInput={showInput} />
+            {/*<form onKeyDown={this.handle}>*/}
+                <input type='text' className="new-todo" placeholder="What needs to be done?" autoFocus={true} onInput={showInput} />
+            {/*</form>*/}
+
         </header>
     )
 }
-
-
-// console.log('input')
 
 
 export default NewTaskForm;
