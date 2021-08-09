@@ -1,6 +1,6 @@
 import React from 'react';
 import Task from "./Task";
-import {textOut} from "./NewTaskForm";
+
 // import {TaskCompleted} from "./Task";
 // import {TaskEditing} from "./Task";
 

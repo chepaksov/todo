@@ -8,9 +8,9 @@ import Footer from "../src/comoinents/Footer";
 
 const Form = () => {
     const todoData = [
-        {label: 'Drink', id: 1},
-        {label: 'Eat', id: 2},
-        {label: 'Break', id: 3}
+        {label: 'Completed task', id: 1},
+        {label: 'Active task', id: 2},
+
     ];
     return (
         <span>
