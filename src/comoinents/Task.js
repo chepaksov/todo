@@ -2,12 +2,13 @@ import React from 'react';
 import BtnIconDestroy from "./BtnIconDestroy";
 import BtnIconEdit from "./BtnIconEdit";
 import {textOut} from "./NewTaskForm";
-const Task = (props) => {
+const Task = ({label}) => {
     return (
         <div className="view">
             <input className="toggle" type="checkbox"/>
             <label>
-                <span className="description" ref={textOut}/>
+
+                <span className="description" ref={textOut}>{label}</span>
                 {/*<span className="created">created <span>{ (new Date()).toString()}</span> minutes ago</span>*/}
             </label>
             <BtnIconEdit/>

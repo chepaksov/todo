@@ -7,11 +7,16 @@ import Footer from "../src/comoinents/Footer";
 
 
 const Form = () => {
+    const todoData = [
+        {label: 'Drink', id: 1},
+        {label: 'Eat', id: 2},
+        {label: 'Break', id: 3}
+    ];
     return (
         <span>
         <NewTaskForm/>
         <section className='main'>
-            <TaskList/>
+            <TaskList todos={todoData}/>
             <Footer/>
         </section>
         </span>
