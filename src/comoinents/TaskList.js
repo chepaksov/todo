@@ -23,6 +23,7 @@ const TaskList = ({todos}) => {
         }
         return (
             <li key={id}>
+
                 <Task {...itemProps}/>
             </li>
         )
