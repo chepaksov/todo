@@ -2,12 +2,9 @@ import React from 'react';
 import Task from "./Task";
 
 
-
-
-
 const TaskList = ({todos}) => {
     const elements = todos.map((item) => {
-        const {id, ...itemProps} = item;
+        const {id, status, ...itemProps} = item;
         if (item.status === 'active'){
             return (
                 <li key={id}>
