@@ -5,13 +5,7 @@ import Task from "./Task";
 const TaskList = ({todos}) => {
     const elements = todos.map((item) => {
         const {id, status, ...itemProps} = item;
-        if (item.status === 'active'){
-            return (
-                <li key={id}>
-                    <Task {...itemProps}/>
-                </li>
-            )
-        }
+
         if(item.status === 'editing') {
             return (
                 <li key={id} className='editing'>
@@ -27,6 +21,11 @@ const TaskList = ({todos}) => {
                 </li>
             )
         }
+        return (
+            <li key={id}>
+                <Task {...itemProps}/>
+            </li>
+        )
 
     })
     return (
