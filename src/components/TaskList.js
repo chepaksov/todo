@@ -4,8 +4,6 @@ import classNames from "classnames";
 
 
 const TaskList = ({todos}) => {
-
-
     const elements = todos.map((item) => {
         const {id, status, ...itemProps} = item;
         const classes = classNames({

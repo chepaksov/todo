@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
 import NewTaskForm from "./NewTaskForm";
 import TaskList from "./TaskList";
 import Footer from "./Footer";
@@ -18,7 +17,6 @@ const App = () => {
             {label: 'Active', id: 2, selected: false},
             {label: 'Completed', id: 3, selected: false},
         ];
-
 
         return (
             <span>

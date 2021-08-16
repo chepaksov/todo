@@ -1,12 +1,9 @@
 import React from 'react';
-import BtnIconDestroy from "../Buttons/BtnIconDestroy";
-import BtnIconEdit from "../Buttons/BtnIconEdit";
-
+import BtnIconDestroy from "./Buttons/BtnIconDestroy";
+import BtnIconEdit from "./Buttons/BtnIconEdit";
 import {formatDistanceToNow} from 'date-fns';
 
-
 const Task = ({label}) => {
-
     return (
         <div className="view">
             <input className="toggle" type="checkbox"/>
@@ -19,10 +16,7 @@ const Task = ({label}) => {
             </label>
             <BtnIconEdit/>
             <BtnIconDestroy/>
-
         </div>
     )
 }
-
-
 export default Task;
