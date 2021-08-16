@@ -10,14 +10,12 @@ const App = () => {
             {label: 'Completed task', id: 1, status: 'completed'},
             {label: 'Editing task', id: 2, status: 'editing'},
             {label: 'Active task', id: 3, status: 'active'},
-
         ];
         const filterElem = [
             {label: 'All', id: 1, selected: true},
             {label: 'Active', id: 2, selected: false},
             {label: 'Completed', id: 3, selected: false},
         ];
-
         return (
             <span>
         <NewTaskForm/>
@@ -28,7 +26,6 @@ const App = () => {
         </span>
         )
     }
-
     ReactDOM.render(<Form/>, document.getElementById('todoapp'));
 }
 export default App;

@@ -6,5 +6,4 @@ const TaskFilter = ({selected, label}) => {
         <button className={classNames({selected})}>{label}</button>
     )
 }
-
 export default TaskFilter;

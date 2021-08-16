@@ -20,5 +20,4 @@ const Footer = ({elements}) => {
         </footer>
     )
 }
-
 export default Footer;

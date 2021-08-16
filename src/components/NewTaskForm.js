@@ -12,7 +12,6 @@ const NewTaskForm = () => {
             <h1>todos</h1>
             <Input/>
         </header>
-
     )
 }
 export default NewTaskForm;
