@@ -1,19 +1,14 @@
 import React from 'react';
+import classNames from "classnames";
 
-const TaskFilter = ({filterElem}) => {
+
+const TaskFilter = ({selected, label}) => {
+    const classes = classNames({
+        selected: selected,
+    })
 
     return (
-        <ul className="filters">
-            <li>
-                <button className="selected">All</button>
-            </li>
-            <li>
-                <button>Active</button>
-            </li>
-            <li>
-                <button>Completed</button>
-            </li>
-        </ul>
+        <button className={classes}>{label}</button>
     )
 }
 

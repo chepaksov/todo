@@ -5,7 +5,6 @@ import BtnIconEdit from "../Buttons/BtnIconEdit";
 import {formatDistanceToNow} from 'date-fns';
 
 
-
 const Task = ({label}) => {
 
     return (
@@ -24,7 +23,6 @@ const Task = ({label}) => {
         </div>
     )
 }
-
 
 
 export default Task;

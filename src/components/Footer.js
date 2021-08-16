@@ -1,16 +1,25 @@
 import React from 'react';
 import TaskFilter from "./TaskFilter";
+import classNames from "classnames";
 
-const Footer = () => {
-    const filter = [
-        {elem : 'All', selected: true},
-        {elem : 'Active', selected: false},
-        {elem : 'Completed', selected: false}
-    ]
+
+const Footer = ({elements}) => {
+    const elementFilter = elements.map((item) => {
+        const {id, ...itemProps} = item;
+        return (
+            <li key={id}>
+                <TaskFilter {...item}  />
+            </li>
+
+
+        )
+    });
     return (
         <footer className="footer">
-            <span className="todo-count">1 items left</span>
-            <TaskFilter filterElem={filter}/>
+            <span className={"todo-count"}>1 items left</span>
+            <ul className="filters">
+                {elementFilter}
+            </ul>
             <button className="clear-completed">Clear completed</button>
         </footer>
     )
