@@ -1,6 +1,6 @@
 import React from 'react';
 import TaskFilter from "./TaskFilter";
-import classNames from "classnames";
+
 
 
 const Footer = ({elements}) => {
@@ -8,7 +8,7 @@ const Footer = ({elements}) => {
         const {id, ...itemProps} = item;
         return (
             <li key={id}>
-                <TaskFilter {...item}  />
+                <TaskFilter {...itemProps}  />
             </li>
 
 
