@@ -1,9 +1,12 @@
-import React from 'react';
+import React, {Component} from 'react';
 import classNames from "classnames";
 
-const TaskFilter = ({selected, label}) => {
-    return (
-        <button className={classNames({selected})}>{label}</button>
-    )
-}
-export default TaskFilter;
+export default class TaskFilter extends Component {
+    render() {
+        const {selected, label} = this.props;
+        return (
+            <button className={classNames({selected})}>{label}</button>
+        )
+    }
+};
+
