@@ -1,6 +1,7 @@
 import React from 'react';
 
-const TaskFilter = () => {
+const TaskFilter = ({filterElem}) => {
+
     return (
         <ul className="filters">
             <li>
