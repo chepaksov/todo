@@ -17,7 +17,7 @@ export default class TaskList extends Component {
             const {id,...itemProps} = item;
 
             return (
-            <span key={id} className=''>
+            <span key={id}>
                  <Task {...itemProps} />
             </span>
                     );
