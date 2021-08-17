@@ -3,16 +3,23 @@ import Task from "./Task";
 import classNames from "classnames";
 
 export default class TaskList extends Component {
+    state = {
+        todoData: [
+            {label: 'Completed task', id: 1},
+            {label: 'Editing task', id: 2},
+            {label: 'Active task', id: 3},
+        ],
 
+    }
     render() {
-
-        const {todos} = this.props;
-        const elements = todos.map((item) => {
+       const {todoData} = this.state;
+        const elements = todoData.map((item) => {
             const {id,...itemProps} = item;
+
             return (
-                <li key={id}>
-                    <Task {...itemProps} />
-                </li>
+            <span key={id} className=''>
+                 <Task {...itemProps} />
+            </span>
                     );
         });
         return (
