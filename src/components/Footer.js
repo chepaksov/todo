@@ -14,7 +14,7 @@ export default class Footer extends Component {
         });
         return (
             <footer className="footer">
-                <span className={"todo-count"}>1 items left</span>
+                <span className="todo-count">1 items left</span>
                 <ul className="filters">
                     {elementFilter}
                 </ul>

@@ -7,14 +7,14 @@ import Footer from "./Footer";
 const App = () => {
     const Form = () => {
         const todoData = [
-            {label: 'Completed task', id: 1, status: 'completed'},
-            {label: 'Editing task', id: 2, status: 'editing'},
-            {label: 'Active task', id: 3, status: 'active'},
+            {label: 'Completed task', id: 1},
+            {label: 'Editing task', id: 2},
+            {label: 'Active task', id: 3},
         ];
         const filterElem = [
-            {label: 'All', id: 1, selected: true},
-            {label: 'Active', id: 2, selected: false},
-            {label: 'Completed', id: 3, selected: false},
+            {label: 'All', id: 1},
+            {label: 'Active', id: 2},
+            {label: 'Completed', id: 3},
         ];
         return (
             <span>
