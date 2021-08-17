@@ -25,7 +25,7 @@ state = {
         const {label} = this.props;
         const {completed, editing} = this.state;
         return (editing) ? (<li className={classNames({editing})}>
-            <input type="text" className="edit" value="Editing task"/>
+            <input type="text" className="edit" defaultvalue="" placeholder={"Editing task"}/>
         </li>) : (
             <li className={classNames({completed})}>
             <div className="view">
