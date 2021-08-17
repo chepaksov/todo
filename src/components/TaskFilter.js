@@ -5,16 +5,18 @@ export default class TaskFilter extends Component {
     state = {
         selected: false
     };
-    onToggleClick = () => {
-        this.setState({
-            selected: true
+    onFilterClick = () => {
+        this.setState(({selected})=> {
+            return {
+                selected: !selected
+            };
         });
     };
     render() {
         const {label} = this.props;
        const  {selected} = this.state;
         return (
-            <button className={classNames({selected})} onClick={this.onToggleClick}>{label}</button>
-        )
-    }
+            <button className={classNames({selected})} onClick={this.onFilterClick}>{label}</button>
+        );
+    };
 };
