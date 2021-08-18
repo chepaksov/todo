@@ -10,7 +10,7 @@ export default class Footer extends Component {
                 <li key={id}>
                     <TaskFilter {...itemProps}  />
                 </li>
-            )
+            );
         });
         return (
             <footer className="footer">
@@ -20,7 +20,6 @@ export default class Footer extends Component {
                 </ul>
                 <button className="clear-completed">Clear completed</button>
             </footer>
-        )
-    }
-}
-
+        );
+    };
+};
