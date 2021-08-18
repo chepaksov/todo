@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
 import Task from "./Task";
-import classNames from "classnames";
-
 export default class TaskList extends Component {
     state = {
         todoData: [
@@ -9,7 +7,6 @@ export default class TaskList extends Component {
             {label: 'Editing task', id: 2},
             {label: 'Active task', id: 3},
         ],
-
     }
     render() {
        const {todoData} = this.state;
