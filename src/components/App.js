@@ -11,14 +11,19 @@ class Form extends Component {
             {label: 'Active', id: 2},
             {label: 'Completed', id: 3},
         ],
+        todoData: [
+            {label: 'Completed task', id: 1},
+            {label: 'Editing task', id: 2},
+            {label: 'Active task', id: 3},
+        ],
     }
     render() {
-        const { filterElem} = this.state
+        const { todoData,filterElem} = this.state
             return (
                 <span>
         <NewTaskForm/>
         <section className='main'>
-            <TaskList/>
+            <TaskList todoData={todoData}/>
             <Footer elements={filterElem}/>
         </section>
         </span>

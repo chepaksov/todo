@@ -1,15 +1,11 @@
 import React, {Component} from 'react';
 import Task from "./Task";
 export default class TaskList extends Component {
-    state = {
-        todoData: [
-            {label: 'Completed task', id: 1},
-            {label: 'Editing task', id: 2},
-            {label: 'Active task', id: 3},
-        ],
-    }
+    // state = {
+    //
+    // }
     render() {
-       const {todoData} = this.state;
+       const {todoData} = this.props;
         const elements = todoData.map((item) => {
             const {id,...itemProps} = item;
 
