@@ -10,8 +10,7 @@ export default class TaskList extends Component {
                 <span key={id}>
                  <Task {...itemProps}
                        onDeleted={() => onDeleted(id)}
-                       onToggleClick={() => this.onToggleClick}
-                       onIconEditClick={() => this.onIconEditClick}/>
+                 />
             </span>
             );
         });
