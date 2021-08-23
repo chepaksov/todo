@@ -4,43 +4,38 @@ import classNames from "classnames";
 
 export default class Task extends Component {
     state = {
-        completed: false,
-        editing: false
+        label: ''
     };
-    onToggleClick = () => {
-        this.setState(({completed}) => {
-            return {
-                completed: !completed
-            };
+    onSubmit = (event) => {
+        event.preventDefault();
+        this.props.editItem(this.state.label);
+        this.setState({
+            label: ''
         });
     };
-    onIconEditClick = () => {
-        this.setState(({editing}) => {
-            return {
-                editing: !editing
-            };
-        });
-    };
-
     render() {
-        const {label} = this.props;
-        const {completed, editing} = this.state;
+        const {label, onDeleted, onToggleCompleted,onToggleEditing, completed, editing } = this.props;
         return (editing) ? (
             <li className={classNames({editing})}>
-                <input type="text" className="edit" defaultValue="Editing task"/>
+                <form onSubmit={this.onSubmit}>
+                    <input type="text" className="edit"
+                           onChange={this.props.onLabelChange(this.state.label)}
+                           defaultValue={this.state.label} />
+                </form>
             </li>) : (
             <li className={classNames({completed})}>
                 <div className="view">
-                    <input className="toggle" type="checkbox" onClick={this.onToggleClick}/>
+                    <input className="toggle" type="checkbox" onClick={onToggleCompleted}/>
                     <label>
                         <span className="description">{label}</span>
                         <span className="created">created {formatDistanceToNow(new Date(), {
                             addSuffix: true,
                             includeSeconds: true
-                        })}</span>
+                        })}
+                        </span>
                     </label>
-                    <button className="icon icon-edit" onClick={this.onIconEditClick}/>
-                    <button className="icon icon-destroy" onClick={this.props.onDeleted}/>
+                    <button className="icon icon-edit" onClick={onToggleEditing}/>
+                    <button className="icon icon-destroy" onClick={onDeleted}/>
                 </div>
             </li>
         );

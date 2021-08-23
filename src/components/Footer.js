@@ -3,18 +3,22 @@ import TaskFilter from "./TaskFilter";
 
 export default class Footer extends Component {
     render() {
-        const {elements} = this.props;
+        const {elements, todo, onToggleSelected, showCompletedTasks} = this.props;
         const elementFilter = elements.map((item) => {
             const {id, ...itemProps} = item;
             return (
                 <li key={id}>
-                    <TaskFilter {...itemProps}  />
+                    <TaskFilter
+                        {...itemProps}
+                        onToggleSelected={() => onToggleSelected(id)}
+                        showCompletedTasks={() => showCompletedTasks(id)}
+                    />
                 </li>
             );
         });
         return (
             <footer className="footer">
-                <span className="todo-count">1 items left</span>
+                <span className="todo-count">{todo} items left</span>
                 <ul className="filters">
                     {elementFilter}
                 </ul>
