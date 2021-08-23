@@ -1,7 +1,7 @@
-import React, {Component} from 'react';
+import React, {PureComponent} from 'react';
 import Task from "./Task";
 
-export default class TaskList extends Component {
+export default class TaskList extends PureComponent {
     render() {
         const {todoData, onDeleted} = this.props;
         const elements = todoData.map((item) => {
