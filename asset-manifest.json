@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/Yuliya-sis/todo/tree/1.3.14/static/css/main.cf852353.chunk.css",
-    "main.js": "/Yuliya-sis/todo/tree/1.3.14/static/js/main.0d609e82.chunk.js",
-    "main.js.map": "/Yuliya-sis/todo/tree/1.3.14/static/js/main.0d609e82.chunk.js.map",
-    "runtime-main.js": "/Yuliya-sis/todo/tree/1.3.14/static/js/runtime-main.19b42e63.js",
-    "runtime-main.js.map": "/Yuliya-sis/todo/tree/1.3.14/static/js/runtime-main.19b42e63.js.map",
-    "static/js/2.7ff5e3be.chunk.js": "/Yuliya-sis/todo/tree/1.3.14/static/js/2.7ff5e3be.chunk.js",
-    "static/js/2.7ff5e3be.chunk.js.map": "/Yuliya-sis/todo/tree/1.3.14/static/js/2.7ff5e3be.chunk.js.map",
-    "index.html": "/Yuliya-sis/todo/tree/1.3.14/index.html",
-    "static/css/main.cf852353.chunk.css.map": "/Yuliya-sis/todo/tree/1.3.14/static/css/main.cf852353.chunk.css.map",
-    "static/js/2.7ff5e3be.chunk.js.LICENSE.txt": "/Yuliya-sis/todo/tree/1.3.14/static/js/2.7ff5e3be.chunk.js.LICENSE.txt"
+    "main.css": "/todo/static/css/main.cf852353.chunk.css",
+    "main.js": "/todo/static/js/main.0d609e82.chunk.js",
+    "main.js.map": "/todo/static/js/main.0d609e82.chunk.js.map",
+    "runtime-main.js": "/todo/static/js/runtime-main.74fb441b.js",
+    "runtime-main.js.map": "/todo/static/js/runtime-main.74fb441b.js.map",
+    "static/js/2.7ff5e3be.chunk.js": "/todo/static/js/2.7ff5e3be.chunk.js",
+    "static/js/2.7ff5e3be.chunk.js.map": "/todo/static/js/2.7ff5e3be.chunk.js.map",
+    "index.html": "/todo/index.html",
+    "static/css/main.cf852353.chunk.css.map": "/todo/static/css/main.cf852353.chunk.css.map",
+    "static/js/2.7ff5e3be.chunk.js.LICENSE.txt": "/todo/static/js/2.7ff5e3be.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.19b42e63.js",
+    "static/js/runtime-main.74fb441b.js",
     "static/js/2.7ff5e3be.chunk.js",
     "static/css/main.cf852353.chunk.css",
     "static/js/main.0d609e82.chunk.js"
