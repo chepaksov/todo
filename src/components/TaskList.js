@@ -10,7 +10,6 @@ export default class TaskList extends PureComponent {
             label: event.target.value
         });
     };
-
     render() {
         const {todoData, onDeleted, onToggleCompleted, onToggleEditing, editItem, active, completed} = this.props;
         let elements;

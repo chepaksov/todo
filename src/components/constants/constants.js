@@ -1,5 +1,6 @@
 let itemId = 1;
-const createTodoItem = (label, completed = undefined, editing = undefined, selected = undefined) => {
+
+const createTodoItem = (label, completed , editing , selected = undefined) => {
     return {
         label,
         id: itemId++,
