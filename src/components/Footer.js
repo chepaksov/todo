@@ -1,9 +1,9 @@
-import React, {Component} from 'react';
+import React, {PureComponent} from 'react';
 import TaskFilter from "./TaskFilter";
 
-export default class Footer extends Component {
+export default class Footer extends PureComponent {
     render() {
-        const {elements, todo, onToggleSelected, showCompletedTasks} = this.props;
+        const {elements, todo, onToggleSelected, showCompletedTasks, onClear} = this.props;
         const elementFilter = elements.map((item) => {
             const {id, ...itemProps} = item;
             return (
@@ -22,7 +22,7 @@ export default class Footer extends Component {
                 <ul className="filters">
                     {elementFilter}
                 </ul>
-                <button className="clear-completed">Clear completed</button>
+                <button className="clear-completed" onClick={onClear}>Clear completed</button>
             </footer>
         );
     };

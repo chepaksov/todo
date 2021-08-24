@@ -1,5 +1,6 @@
-import React, {Component} from 'react';
-export default class NewTaskForm extends Component {
+import React, {PureComponent} from 'react';
+
+export default class NewTaskForm extends PureComponent {
     state = {
         label: ''
     };
@@ -25,12 +26,9 @@ export default class NewTaskForm extends Component {
                            className="new-todo"
                            placeholder="What needs to be done?" autoFocus={true}
                            onChange={this.onLabelChange}
-                           value={this.state.label} />
+                           value={this.state.label}/>
                 </form>
             </header>
         );
     };
 };
-
-
-	
