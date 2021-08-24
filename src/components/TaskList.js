@@ -24,8 +24,7 @@ export default class TaskList extends PureComponent {
                               onToggleEditing={() => onToggleEditing(id)}
                               onLabelChange={() => this.onLabelChange}
                               editItem={() => editItem(id, this.state.label)}/>
-                    </span>
-            );
+                    </span>);
         })) : (active.selected) ? (
             elements = todoData.filter(item => !item.completed).map((item) => {
                 const {id, ...itemProps} = item;
