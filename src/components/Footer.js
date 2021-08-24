@@ -2,8 +2,14 @@ import React, {PureComponent} from 'react';
 import TaskFilter from "./TaskFilter";
 
 export default class Footer extends PureComponent {
+    static defaultProps ={
+        onClear: ()=>{console.log('function onClear not passed')},
+        onToggleSelected: ()=> {console.log('function onToggleSelected not passed')},
+        elements: [],
+        activeTaskLength: '0'
+    }
     render() {
-        const {elements, todo, onToggleSelected, showCompletedTasks, onClear} = this.props;
+        const {elements, activeTaskLength, onToggleSelected, onClear} = this.props;
         const elementFilter = elements.map((item) => {
             const {id, ...itemProps} = item;
             return (
@@ -11,14 +17,13 @@ export default class Footer extends PureComponent {
                     <TaskFilter
                         {...itemProps}
                         onToggleSelected={() => onToggleSelected(id)}
-                        showCompletedTasks={() => showCompletedTasks(id)}
                     />
                 </li>
             );
         });
         return (
             <footer className="footer">
-                <span className="todo-count">{todo} items left</span>
+                <span className="todo-count">{activeTaskLength} items left</span>
                 <ul className="filters">
                     {elementFilter}
                 </ul>

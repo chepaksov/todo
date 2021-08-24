@@ -5,11 +5,21 @@ export default class TaskList extends PureComponent {
     state = {
         label: ''
     };
+static defaultProps ={
+    todoData : [],
+    onDeleted: ()=>{console.log('function onDeleted not passed')},
+    onToggleCompleted: ()=> {console.log('function onToggleCompleted not passed')},
+    onToggleEditing: ()=>{console.log('function onToggleEditing not passed')},
+    editItem: ()=>{console.log('function editItem not passed')},
+    active: {},
+    completed: {}
+}
     onLabelChange = (event) => {
         this.setState({
             label: event.target.value
         });
     };
+
     render() {
         const {todoData, onDeleted, onToggleCompleted, onToggleEditing, editItem, active, completed} = this.props;
         let elements;

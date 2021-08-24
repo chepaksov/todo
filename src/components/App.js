@@ -11,6 +11,7 @@ class Form extends PureComponent {
         filterElem,
         todoData,
     };
+
     deleteItem = (id) => {
         this.setState(({todoData}) => {
             const idx = todoData.findIndex((el) => el.id === id);
@@ -95,7 +96,8 @@ class Form extends PureComponent {
         return (
             <><NewTaskForm addItem={this.addItem}/>
                 <section className='main'>
-                    <TaskList todoData={todoData}
+                    <TaskList
+                        todoData={todoData}
                               onDeleted={this.deleteItem}
                               onToggleCompleted={this.onToggleCompleted}
                               onToggleEditing={this.onToggleEditing}
@@ -104,7 +106,7 @@ class Form extends PureComponent {
                               active={active}
                               completed={completed}/>
                     <Footer elements={filterElem}
-                            todo={activeTaskLength}
+                            activeTaskLength={activeTaskLength}
                             onToggleSelected={this.onToggleSelected}
                             onClear={this.onClear}/>
                 </section>
