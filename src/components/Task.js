@@ -11,15 +11,20 @@ export default class Task extends PureComponent {
         onDeleted: ()=>{console.log('function onDeleted not passed')},
         onToggleCompleted: ()=> {console.log('function onToggleCompleted not passed')},
         onToggleEditing: ()=>{console.log('function onToggleEditing not passed')},
-        editItem: ()=>{console.log('function editItem not passed')},
         onLabelChange: ()=>{console.log('function onLabelChange not passed')},
-        active: {},
-        completed: {},
-        label: null,
+        completed: false,
+        editing: false
     }
     static propTypes = {
-        label: PropTypes.string
+        label: PropTypes.string.isRequired,
+        onDeleted: PropTypes.func.isRequired,
+        onToggleCompleted: PropTypes.func,
+        onToggleEditing: PropTypes.func,
+        completed: PropTypes.bool,
+        editing: PropTypes.bool,
+        onLabelChange: PropTypes.func
     }
+
     onSubmit = (event) => {
         event.preventDefault();
         this.props.editItem(this.state.label);
@@ -31,6 +36,7 @@ export default class Task extends PureComponent {
     render() {
         const {label, onDeleted, onToggleCompleted, onToggleEditing, completed, editing,onLabelChange} = this.props;
 
+        console.log(completed)
         return ((editing) ? (
                 <li className={classNames({editing})}>
                     <form onSubmit={this.onSubmit}>
