@@ -1,6 +1,7 @@
 import React, {PureComponent} from 'react';
 import classNames from "classnames";
 import PropTypes from 'prop-types';
+
 export default class TaskFilter extends PureComponent {
     static defaultProps ={
         selected: false,
