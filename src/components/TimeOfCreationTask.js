@@ -8,19 +8,18 @@ export default class TimeOfCreationTask extends PureComponent {
         date: ''
     }
     componentDidMount() {
-       setInterval(()=> this.getDate(),500)
+        this.getDate();
     };
     getDate = () => {
         let date = new Date();
         this.setState({date});
     }
 render(){
-    console.log(new Date())
-    console.log(this.state.date)
+    const {date}= this.props
     return (
         <form onSubmit={this.componentDidMount}>
         <span className="created">
-            {/*created {formatDistanceToNow(this.state.date, { addSuffix: true })}*/}
+            created {date}
         </span>
         </form>
     )

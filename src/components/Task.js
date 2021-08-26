@@ -58,7 +58,7 @@ export default class Task extends PureComponent {
                         </form>
                         <label>
                             <span className="description">{label}</span>
-                            <TimeOfCreationTask/>
+                            <TimeOfCreationTask date={new Date()}/>
                         </label>
                         <button className="icon icon-edit" onClick={onToggleEditing}/>
                         <button className="icon icon-destroy" onClick={onDeleted}/>
