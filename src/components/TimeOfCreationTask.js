@@ -15,8 +15,8 @@ export default class TimeOfCreationTask extends PureComponent {
     };
 
     getDate = () => {
-        let date = formatDistanceToNow(this.props.date, {addSuffix: true, includeSeconds:true});
-        this.setState( {date})
+        let date = formatDistanceToNow(this.props.date, {addSuffix: true, includeSeconds: true});
+        this.setState({date})
     };
 
     render() {
@@ -24,7 +24,7 @@ export default class TimeOfCreationTask extends PureComponent {
         return (
             <form onSubmit={this.componentDidMount}>
         <span className="created">
-            created { date}
+            created {date}
         </span>
             </form>)
     };
