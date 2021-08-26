@@ -2,7 +2,7 @@ import React, {PureComponent} from 'react';
 
 export default class NewTaskForm extends PureComponent {
     state = {
-        label: ''
+        label: '',
     };
     onLabelChange = (event) => {
         this.setState({

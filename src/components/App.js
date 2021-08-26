@@ -58,7 +58,7 @@ class Form extends PureComponent {
             newItem,
             ...arr.slice(idx + 1)];
         return newArr.map(obj => obj !== newItem ? {...obj, selected: false} : {...obj, selected: true});
-    }
+    };
 
     onToggleCompleted = (id) => {
         this.setState(({todoData}) => {
@@ -98,13 +98,13 @@ class Form extends PureComponent {
                 <section className='main'>
                     <TaskList
                         todoData={todoData}
-                              onDeleted={this.deleteItem}
-                              onToggleCompleted={this.onToggleCompleted}
-                              onToggleEditing={this.onToggleEditing}
-                              editItem={this.editItem}
-                              all={all}
-                              active={active}
-                              completed={completed}/>
+                        onDeleted={this.deleteItem}
+                        onToggleCompleted={this.onToggleCompleted}
+                        onToggleEditing={this.onToggleEditing}
+                        editItem={this.editItem}
+                        all={all}
+                        active={active}
+                        completed={completed}/>
                     <Footer elements={filterElem}
                             activeTaskLength={activeTaskLength}
                             onToggleSelected={this.onToggleSelected}

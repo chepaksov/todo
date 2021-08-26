@@ -3,9 +3,11 @@ import classNames from "classnames";
 import PropTypes from 'prop-types';
 
 export default class TaskFilter extends PureComponent {
-    static defaultProps ={
+    static defaultProps = {
         selected: false,
-        onToggleSelected: ()=> {console.log('function onToggleSelected not passed')},
+        onToggleSelected: () => {
+            console.log('function onToggleSelected not passed')
+        },
         label: '',
     };
     static propTypes = {
@@ -13,6 +15,7 @@ export default class TaskFilter extends PureComponent {
         selected: PropTypes.bool,
         onToggleSelected: PropTypes.func
     };
+
     render() {
         const {label, selected, onToggleSelected} = this.props;
         return (
